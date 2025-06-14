@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hack Habit Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">Hack Habit</div>
+            <nav>
+                <ul>
+                    <li><a href="#challenges">Challenges</a></li>
+                    <li><a href="#progress">Progress</a></li>
+                    <li><a href="#community">Community</a></li>
+                    <li><a href="#recommendations">For You</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <button id="loginBtn">Login</button>
+                <button id="signupBtn">Sign Up</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Build Better Habits, One Hack at a Time</h1>
+                <p>Join our community and transform your life with weekly, research-backed challenges</p>
+                <button id="ctaBtn">Start Your Journey</button>
+            </div>
+        </section>
+
+        <section id="challenges" class="weekly-challenges">
+            <div class="container">
+                <h2>This Week's Challenge</h2>
+                <div class="challenge-card">
+                    <h3 id="currentChallengeTitle">The Two-Minute Rule</h3>
+                    <p id="currentChallengeDesc">If a task takes less than two minutes, do it immediately. This hack helps overcome procrastination by creating momentum.</p>
+                    <div class="challenge-meta">
+                        <span class="category">Productivity</span>
+                        <span class="duration">7 days</span>
+                    </div>
+                    <button id="acceptChallengeBtn">Accept Challenge</button>
+                </div>
+                <div class="upcoming-challenges">
+                    <h3>Upcoming Challenges</h3>
+                    <div class="challenge-list" id="upcomingChallenges">
+                        <!-- JS will populate this -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="progress" class="progress-tracking">
+            <div class="container">
+                <h2>Your Progress</h2>
+                <div class="progress-stats">
+                    <div class="stat-card">
+                        <h3>Current Streak</h3>
+                        <div class="streak-count">5 <span>days</span></div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Completed</h3>
+                        <div class="completed-count">12 <span>hacks</span></div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Points</h3>
+                        <div class="points-count">450 <span>pts</span></div>
+                    </div>
+                </div>
+                <div class="badges">
+                    <h3>Your Badges</h3>
+                    <div class="badge-container" id="badgeContainer">
+                        <!-- JS will populate this -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="reflection">
+            <div class="container">
+                <h2>Reflect on Your Journey</h2>
+                <div class="reflection-form">
+                    <label for="reflectionText">How did this week's challenge go?</label>
+                    <textarea id="reflectionText" placeholder="Share your thoughts, insights, and what you learned..."></textarea>
+                    <button id="submitReflectionBtn">Share Reflection</button>
+                </div>
+                <div class="previous-reflections" id="previousReflections">
+                    <!-- JS will populate this -->
+                </div>
+            </div>
+        </section>
+
+        <section id="community" class="community">
+            <div class="container">
+                <h2>Community</h2>
+                <div class="community-content">
+                    <div class="discussion">
+                        <h3>Latest Discussions</h3>
+                        <div class="discussion-list" id="discussionList">
+                            <!-- JS will populate this -->
+                        </div>
+                        <div class="new-post">
+                            <input type="text" id="postTitle" placeholder="Post title">
+                            <textarea id="postContent" placeholder="What's on your mind?"></textarea>
+                            <button id="submitPostBtn">Post to Community</button>
+                        </div>
+                    </div>
+                    <div class="leaderboard">
+                        <h3>Leaderboard</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Rank</th>
+                                    <th>User</th>
+                                    <th>Points</th>
+                                    <th>Streak</th>
+                                </tr>
+                            </thead>
+                            <tbody id="leaderboardBody">
+                                <!-- JS will populate this -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="recommendations" class="recommendations">
+            <div class="container">
+                <h2>Recommended For You</h2>
+                <div class="recommendation-list" id="recommendationList">
+                    <!-- JS will populate this -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h3>About</h3>
+                    <ul>
+                        <li><a href="#">Our Mission</a></li>
+                        <li><a href="#">The Science</a></li>
+                        <li><a href="#">Team</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="social-media">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <div class="copyright">
+                &copy; 2023 Hack Habit Tracker. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" required>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Sign Up</h2>
+            <form id="signupForm">
+                <div class="form-group">
+                    <label for="signupName">Name</label>
+                    <input type="text" id="signupName" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupEmail">Email</label>
+                    <input type="email" id="signupEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword">Password</label>
+                    <input type="password" id="signupPassword" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupConfirmPassword">Confirm Password</label>
+                    <input type="password" id="signupConfirmPassword" required>
+                </div>
+                <button type="submit">Create Account</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
